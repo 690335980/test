@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" type="text/css" href="example.css">
+</head>
+
+<body>
+    <div id="app" class="app">
+        <h2 class="h2">
+            <a>mvvm</a>
+            <span>- 功能演示</span>
+            <button @click="addHandler">添加</button>
+            <button @click="deleteHandler">清空</button>
+        </h2>
+        <ul class="list">
+            <li class="list-item">
+                <span class="label">消息</span>
+                <input type="text" :value="input" @change="update">
+            </li>
+        </ul>
+        <h2 class="h2">
+        </h2>
+        <div style="white-space: pre;" class="content">
+            {{list.content}}
+        </div>
+    </div>
+</body>
+<script src="../dist/mvvm.umd.js"></script>
+<script>
+    const { reactive, ref, MVVM } = mvvm;
+
+    new MVVM({
+        setup() {
+            let list = reactive({
+                content: "新添加一条消息"
+            })
+            let input = ref("")
+            return {
+                list,
+                input,
+                update: (val) => void (input.value = val.target.value),
+                addHandler: () => void (
+                    list.content = list.content + "\r\n" + input.value
+                ),
+                deleteHandler: () => void (
+                    list.content = " "
+                )
+            }
+        }
+    }).mount('#app');
+</script>
+
+</html>

@@ -1,0 +1,99 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font: 14px tahoma, arial, Hiragino Sans GB, \\5b8b\4f53, sans-serif;
+}
+.app {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+    margin: 60px auto;
+    padding: 20px;
+    width: 500px;
+    box-sizing: border-box;
+    box-shadow: 0 3px 16px 4px #ddd;
+}
+
+#app .h2 {
+    margin: 0 0 10px;
+    padding: 0 0 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+
+#app .h2 a {
+    color: #2ad;
+}
+#app button {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    padding: 6px 12px;
+    border-radius: 3px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 700;
+    border: 1px solid #ddd;
+    height: 30px;
+    outline: none;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+#app button:hover {
+    background-color: #449d44;
+    border-color: #398439;
+}
+#app button:active {
+    background-color: #398439;
+    border-color: #255625;
+}
+
+#app .list {
+    margin: 0;
+    padding: 0;
+    /* text-align: center; */
+}
+#app .list .list-item {
+    margin-bottom: 10px;
+    list-style-type: none;
+    padding: 0 60px;
+}
+
+.flex {
+    display: flex;
+}
+
+#app .list .list-item .label {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+}
+#app .list .list-item input[type='text'],
+#app .list .list-item input[type='number'] {
+    flex: 1;
+    transition: 0.3s;
+    padding: 0 6px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    height: 30px;
+    outline: none;
+    box-sizing: border-box;
+}
+#app .list .list-item input[type='text']:focus,
+#app .list .list-item input[type='number']:focus {
+    border-color: transparent;
+    box-shadow: 0 0 6px 1px #4cae4c;
+}
+
+.foot {
+    text-align: right;
+    margin-right: 30;
+}
+
+.content{
+    text-align: center;
+}
